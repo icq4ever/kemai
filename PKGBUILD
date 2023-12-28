@@ -2,13 +2,13 @@
 
 pkgname="kemai"
 pkgdesc="A QT5 client for kimai2"
-pkgver="0.5.0"
+pkgver="0.10.0"
 pkgrel=1
 url="https://github.com/AlexandrePTJ/kemai"
 arch=('i686' 'x86_64')
 license=('MIT')
 source=("https://github.com/AlexandrePTJ/kemai/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('c224f91e2e25ec9fd2bed18d5e5d63f988c36fb9f05b02992ffb4bb61b877f87')
+sha256sums=('2b77fcc915f2bdc6012d43cd65570363e2ca7ba38a424fe1242b1cfc3655f1eb')
 makedepends=("cmake")
 depends=("qt5-base")
 
@@ -21,6 +21,7 @@ build() {
 package() {
   mkdir ${pkgdir}/usr/bin -p
   mkdir ${pkgdir}/usr/share/applications -p
-  cp -f kemai-${pkgver}/build/src/app/Kemai ${pkgdir}/usr/bin/
-  cp -f kemai-${pkgver}/bundle/linux/kemai.desktop ${pkgdir}/usr/share/applications/
+  cp -f kemai-${pkgver}/build/src/Kemai ${pkgdir}/usr/bin/
+  cp -f kemai-${pkgver}/bundle/linux/sysroot/usr/bin/kemai-wrapper.sh ${pkgdir}/usr/bin/
+  cp -f kemai-${pkgver}/bundle/linux/sysroot/kemai-wrapper.desktop ${pkgdir}/usr/share/applications/kemai.desktop
 }
