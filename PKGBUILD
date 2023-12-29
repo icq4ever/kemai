@@ -1,5 +1,5 @@
 # Maintainer: Matthias De Bie <mattydebie@gmail.com>
-
+# Contributor: Yi donghoon <icq4ever@gmail.com>
 pkgname="kemai"
 pkgdesc="A QT5 client for kimai2"
 pkgver="0.10.0"
